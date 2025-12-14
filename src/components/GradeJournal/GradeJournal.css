@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Основные стили контейнера */
+.gradeJournal {
+  padding: 20px 20px 20px 30px; /* Левый отступ 30px как в твоём хедере */
+  max-width: 1000px; /* Увеличил максимальную ширину */
+  margin: 0 auto;
+  background-color: #F6F1F1;
+  font-family: "Open Sans", sans-serif;
+  animation: subtleFadeIn 0.4s ease-out;
+}
+
+/* Центрирование только заголовка */
+.gradeJournal-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Контент выравниваем слева */
+.gradeJournal-content {
+  text-align: left;
+}
+
+/* Сдержанные анимации */
+@keyframes subtleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtleSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes subtleScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Кнопки */
+.addButton {
+  padding: 12px 24px;
+  background: #19A7CE;
+  color: white;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 150ms ease-in;
+  animation: subtleSlideIn 0.3s ease-out;
+  margin-left: 0; /* Выравниваем по левому краю */
+}
+
+.addButton:hover {
+  background: #1487a7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 167, 206, 0.3);
+}
+
+.addButton:active {
+  transform: translateY(0);
+}
+
+.actionButton {
+  padding: 10px 20px;
+  color: #0C2B4E;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 150ms ease-in;
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton {
+  background: #19A7CE;
+  color: white;
+  animation: subtleSlideIn 0.3s ease-out 0.05s both;
+}
+
+.primaryButton:hover {
+  background: #1487a7;
+}
+
+.successButton {
+  background: #AFD3E2;
+  color: #0C2B4E;
+  animation: subtleSlideIn 0.3s ease-out 0.1s both;
+}
+
+.successButton:hover {
+  background: #9dbbc7;
+}
+
+.warningButton {
+  background: #146C94;
+  color: white;
+  animation: subtleSlideIn 0.3s ease-out 0.15s both;
+}
+
+.warningButton:hover {
+  background: #115a7a;
+}
+
+.dangerButton {
+  background: #e74c3c;
+  color: white;
+  animation: subtleSlideIn 0.3s ease-out 0.2s both;
+}
+
+.dangerButton:hover {
+  background: #c0392b;
+}
+
+.secondaryButton {
+  background: #AFD3E2;
+  color: #0C2B4E;
+  animation: subtleSlideIn 0.3s ease-out 0.25s both;
+}
+
+.secondaryButton:hover {
+  background: #9dbbc7;
+}
+
+/* Области ввода */
+.addingContainer {
+  border: 2px solid #19A7CE;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #AFD3E2 0%, #F6F1F1 100%);
+  animation: subtleScaleIn 0.25s ease;
+  transition: all 150ms ease-in;
+  margin-left: 0; /* Выравниваем по левому краю */
+}
+
+.addingContainer:hover {
+  box-shadow: 0 6px 20px rgba(25, 167, 206, 0.15);
+  border-color: #146C94;
+}
+
+.editingContainer {
+  border: 2px solid #146C94;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #AFD3E2 0%, #F6F1F1 100%);
+  animation: subtleScaleIn 0.3s ease;
+  transition: all 150ms ease-in;
+  margin-left: 0; /* Выравниваем по левому краю */
+}
+
+.editingContainer:hover {
+  box-shadow: 0 6px 20px rgba(20, 108, 148, 0.15);
+}
+
+/* Поля ввода */
+.inputContainer {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  animation: subtleSlideIn 0.25s ease-out;
+  transition: all 150ms ease-in;
+}
+
+.inputLabel {
+  width: 140px;
+  margin-right: 15px;
+  color: #146C94;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 150ms ease-in;
+}
+
+.inputContainer:hover .inputLabel {
+  color: #19A7CE;
+}
+
+.textInput {
+  padding: 10px 15px;
+  border: 2px solid #AFD3E2;
+  border-radius: 10px;
+  flex: 1;
+  margin-right: 10px;
+  background: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #0C2B4E;
+  transition: all 150ms ease-in;
+  animation: subtleSlideIn 0.25s ease-out;
+}
+
+.textInput:focus {
+  outline: none;
+  border-color: #19A7CE;
+  box-shadow: 0 0 0 3px rgba(25, 167, 206, 0.1);
+  background: #F6F1F1;
+}
+
+.textInput:hover {
+  border-color: #19A7CE;
+}
+
+.textInput::placeholder {
+  color: #AFD3E2;
+  font-style: italic;
+}
+
+.removeInputButton {
+  padding: 8px 12px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  transition: all 150ms ease-in;
+  animation: subtleScaleIn 0.2s ease-out;
+}
+
+.removeInputButton:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Карточки предметов */
+.itemCard {
+  border: 2px solid #AFD3E2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background: white;
+  position: relative;
+  animation: subtleFadeIn 0.4s ease;
+  transition: all 150ms ease-in;
+  margin-left: 0; /* Выравниваем по левому краю */
+}
+
+.itemCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(25, 167, 206, 0.15);
+  border-color: #19A7CE;
+}
+
+.itemCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #19A7CE, #146C94);
+  border-radius: 15px 15px 0 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.itemCard:hover::before {
+  transform: scaleX(1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding-right: 120px;
+  animation: subtleFadeIn 0.3s ease-out 0.1s both;
+}
+
+.subjectTitle {
+  margin: 0;
+  color: #146C94;
+  flex: 1;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 150ms ease-in;
+}
+
+.itemCard:hover .subjectTitle {
+  color: #19A7CE;
+}
+
+/* Кнопки управления */
+.cardControls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  animation: subtleSlideIn 0.3s ease-out 0.15s both;
+  z-index: 10;
+}
+
+.controlButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all 150ms ease-in;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlButton:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.editButton {
+  background: #AFD3E2;
+  color: #0C2B4E;
+}
+
+.editButton:hover {
+  background: #9dbbc7;
+}
+
+.deleteButton {
+  background: #e74c3c;
+  color: white;
+}
+
+.deleteButton:hover {
+  background: #c0392b;
+}
+
+/* Средний балл */
+.averageContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 15px 0 10px 0;
+  animation: subtleScaleIn 0.3s ease-out 0.2s both;
+}
+
+.averageBadge {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  min-width: 90px;
+  transition: all 150ms ease-in;
+}
+
+.averageBadge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.averageValue {
+  font-size: 18px;
+  line-height: 1.2;
+  transition: all 150ms ease-in;
+}
+
+.averageText {
+  font-size: 10px;
+  opacity: 0.9;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+/* Оценки */
+.gradesContainer {
+  margin-bottom: 5px;
+  animation: subtleFadeIn 0.3s ease-out 0.25s both;
+}
+
+.gradeBadge {
+  display: inline-block;
+  color: white;
+  padding: 8px 14px;
+  margin: 4px;
+  border-radius: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 150ms ease-in;
+  animation: subtleScaleIn 0.25s ease-out;
+}
+
+.gradeBadge:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.excellentGrade { 
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  animation-delay: 0.05s;
+}
+.goodGrade { 
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
+  animation-delay: 0.1s;
+}
+.satisfactoryGrade { 
+  background: linear-gradient(135deg, #e67e22, #e74c3c);
+  animation-delay: 0.15s;
+}
+.poorGrade { 
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  animation-delay: 0.2s;
+}
+.invalidGrade { 
+  background: #95a5a6;
+  animation-delay: 0.25s;
+}
+
+/* Статистика */
+.cardStats {
+  font-size: 13px;
+  color: #146C94;
+  margin-top: 10px;
+  border-top: 2px solid #AFD3E2;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: subtleFadeIn 0.3s ease-out 0.3s both;
+}
+
+.statsInfo {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+  transition: all 150ms ease-in;
+}
+
+.overallStats {
+  margin-top: 25px;
+  padding: 20px;
+  background: linear-gradient(135deg, #AFD3E2 0%, #F6F1F1 100%);
+  border-radius: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #146C94;
+  border: 2px solid #19A7CE;
+  animation: subtleFadeIn 0.4s ease-out 0.35s both;
+  transition: all 150ms ease-in;
+  margin-left: 0; /* Выравниваем по левому краю */
+}
+
+.overallStats:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(25, 167, 206, 0.2);
+}
+
+/* Текст и состояния */
+.placeholderText {
+  color: #AFD3E2;
+  font-style: italic;
+  font-weight: 500;
+  animation: subtleFadeIn 0.3s ease-out;
+}
+
+.hintText {
+  color: #146C94;
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  animation: subtleSlideIn 0.25s ease-out;
+}
+
+.disabledButton {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+  transform: none !important;
+}
+
+.disabledButton:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: #AFD3E2 !important;
+}
+
+/* Группы кнопок */
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  animation: subtleFadeIn 0.3s ease-out 0.4s both;
+}
+
+/* Заголовки */
+.gradeJournal h2 {
+  color: #146C94;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center; /* Только заголовок по центру */
+}
+
+.gradeJournal h3 {
+  color: #19A7CE;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: left; /* Остальные заголовки слева */
+}
+
+.gradeJournal h4 {
+  color: #146C94;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .gradeJournal {
+    padding: 20px 15px 20px 15px; /* На мобильных уменьшаем отступы */
+  }
+  
+  .cardHeader {
+    flex-direction: column;
+    padding-right: 0;
+  }
+  
+  .averageContainer {
+    justify-content: center;
+    margin: 12px 0 8px 0;
+  }
+  
+  .cardControls {
+    position: static;
+    margin-bottom: 15px;
+    justify-content: flex-end;
+  }
+  
+  .cardStats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .statsInfo {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .inputContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .inputLabel {
+    width: 100%;
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+  
+  .textInput {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .removeInputButton {
+    align-self: flex-end;
+    margin-top: 8px;
+  }
+  
+  .itemCard:hover {
+    transform: none;
+  }
+  
+  .gradeBadge:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .averageBadge {
+    min-width: 80px;
+    padding: 6px 12px;
+  }
+  
+  .averageValue {
+    font-size: 16px;
+  }
+  
+  .averageText {
+    font-size: 9px;
+  }
+  
+  .gradeJournal {
+    padding: 15px;
+  }
+  
+  .cardControls {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .controlButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .statsInfo {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
