@@ -1,0 +1,654 @@
+/* PerformanceJournal.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.performanceJournal {
+  padding: 20px 20px 20px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #F6F1F1;
+  font-family: "Open Sans", sans-serif;
+}
+
+.performanceJournal-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.performanceJournal-header h2 {
+  color: #146C94;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #AFD3E2;
+}
+
+/* Общая успеваемость */
+.overallPerformance {
+  margin-bottom: 30px;
+}
+
+.performanceCard {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  border: 2px solid #19A7CE;
+  box-shadow: 0 4px 15px rgba(25, 167, 206, 0.1);
+}
+
+.performanceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.performanceHeader h3 {
+  color: #146C94;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+}
+
+.performanceBadge {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  min-width: 80px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.performanceText {
+  color: #146C94;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+.statItem {
+  text-align: center;
+  padding: 15px;
+  background: #F6F1F1;
+  border-radius: 10px;
+  border: 1px solid #AFD3E2;
+  transition: all 150ms ease-in;
+}
+
+.statItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #146C94;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: #19A7CE;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Панель сортировки */
+.sortPanel {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #AFD3E2;
+}
+
+.sortButtons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.sortButton {
+  padding: 10px 20px;
+  background: #AFD3E2;
+  color: #0C2B4E;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 150ms ease-in;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sortButton:hover {
+  background: #9dbbc7;
+  transform: translateY(-2px);
+}
+
+.sortButton.active {
+  background: #19A7CE;
+  color: white;
+  box-shadow: 0 4px 12px rgba(25, 167, 206, 0.3);
+}
+
+/* Таблица предметов */
+.subjectsTable {
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #AFD3E2;
+}
+
+.subjectsTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.subjectsTable th {
+  background: #146C94;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 15px;
+  text-align: left;
+  border-right: 1px solid #115a7a;
+}
+
+.subjectsTable th:last-child {
+  border-right: none;
+}
+
+.subjectsTable td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+.subjectsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.subjectsTable tr:hover {
+  background-color: #f8f9fa;
+}
+
+.subjectsTable tr.selected {
+  background-color: #F0F8FF;
+}
+
+.index {
+  font-weight: 600;
+  color: #146C94;
+  width: 50px;
+}
+
+.subjectName {
+  font-weight: 600;
+  color: #146C94;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.average {
+  min-width: 120px;
+}
+
+.averageBadge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+}
+
+.gradesList {
+  min-width: 250px;
+}
+
+.gradesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.gradeBadge {
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.performance {
+  min-width: 200px;
+}
+
+.performanceIndicator {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.actions {
+  min-width: 120px;
+}
+
+.viewButton {
+  padding: 6px 15px;
+  background: #AFD3E2;
+  color: #0C2B4E;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all 150ms ease-in;
+}
+
+.viewButton:hover {
+  background: #9dbbc7;
+}
+
+/* Детальная информация */
+.subjectDetail {
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #19A7CE;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.detailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: linear-gradient(90deg, #19A7CE, #146C94);
+}
+
+.detailHeader h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+.closeButton {
+  background: white;
+  color: #146C94;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 150ms ease-in;
+}
+
+.closeButton:hover {
+  background: #F6F1F1;
+  transform: scale(1.1);
+}
+
+.detailContent {
+  padding: 25px;
+}
+
+.detailRow {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.detailLabel {
+  width: 180px;
+  color: #146C94;
+  font-weight: 600;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.detailValue {
+  color: #0C2B4E;
+  font-size: 16px;
+}
+
+.subjectNameLarge {
+  font-weight: 700;
+  font-size: 20px;
+  color: #146C94;
+}
+
+.averageLarge {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.gradesDetail {
+  flex: 1;
+}
+
+.gradesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+}
+
+.gradeItem {
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 150ms ease-in;
+}
+
+.gradeItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gradeNumber {
+  font-size: 10px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.gradeValue {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.gradeStatus {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 10px;
+}
+
+.recommendations {
+  flex: 1;
+  background: #F6F1F1;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #19A7CE;
+}
+
+.recommendationText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.recommendationText.success {
+  color: #27ae60;
+}
+
+.recommendationText.warning {
+  color: #f39c12;
+}
+
+.recommendationText.danger {
+  color: #c0392b;
+}
+
+/* Сводка по успеваемости */
+.performanceSummary {
+  margin-bottom: 30px;
+}
+
+.performanceSummary h3 {
+  color: #146C94;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.summaryCard {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.summaryCard.excellent {
+  border-top: 4px solid #27ae60;
+}
+
+.summaryCard.good {
+  border-top: 4px solid #f39c12;
+}
+
+.summaryCard.satisfactory {
+  border-top: 4px solid #e67e22;
+}
+
+.summaryCard.poor {
+  border-top: 4px solid #c0392b;
+}
+
+.summaryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.summaryHeader h4 {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+}
+
+.summaryCard.excellent .summaryHeader h4 { color: #27ae60; }
+.summaryCard.good .summaryHeader h4 { color: #f39c12; }
+.summaryCard.satisfactory .summaryHeader h4 { color: #e67e22; }
+.summaryCard.poor .summaryHeader h4 { color: #c0392b; }
+
+.summaryCount {
+  font-weight: 700;
+  font-size: 24px;
+  background: #F6F1F1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summarySubjects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summarySubject {
+  font-size: 14px;
+  padding: 6px 10px;
+  background: #F6F1F1;
+  border-radius: 8px;
+  color: #0C2B4E;
+  transition: all 150ms ease-in;
+}
+
+.summarySubject:hover {
+  background: #AFD3E2;
+  transform: translateX(5px);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.performanceCard,
+.subjectsTable,
+.subjectDetail,
+.summaryCard {
+  animation: slideInUp 0.4s ease-out;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .subjectsTable {
+    overflow-x: auto;
+  }
+  
+  .subjectsTable table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .performanceJournal {
+    padding: 15px;
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sortButtons {
+    flex-direction: column;
+  }
+  
+  .sortButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detailRow {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .detailLabel {
+    width: 100%;
+  }
+  
+  .gradesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .performanceHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .subjectNameLarge {
+    font-size: 18px;
+  }
+  
+  .averageLarge {
+    font-size: 20px;
+  }
+}
+
+/* Общие стили текста */
+.hintText {
+  color: #146C94;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.placeholderText {
+  color: #AFD3E2;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Состояния кнопок */
+.sortButton:disabled,
+.viewButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Эффекты ховера */
+.gradeBadge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Скролл для таблицы на мобильных */
+@media (max-width: 992px) {
+  .subjectsTable {
+    position: relative;
+  }
+  
+  .subjectsTable::after {
+    content: '← Прокрутите →';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #19A7CE;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+}

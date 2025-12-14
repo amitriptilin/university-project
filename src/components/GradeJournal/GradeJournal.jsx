@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useGradeData } from '../../context/GradeDataContext';
 import './GradeJournal.css';
 
-const GradeJournal = ({ onDataUpdate }) => {
+const GradeJournal = () => {
   const [inputs, setInputs] = useState(['']);
-  const [items, setItems] = useState([]);
   const [isAdding, setIsAdding] = useState(false);
   const [editingIndex, setEditingIndex] = useState(null);
   const [editInputs, setEditInputs] = useState([]);
-
-  useEffect(() => {
-    if (onDataUpdate) {
-      onDataUpdate(items);
-    }
-  }, [items, onDataUpdate]);
+  
+  const { gradeData: items, setGradeData: setItems } = useGradeData();
 
   const addInput = () => setInputs([...inputs, '']);
   const addEditInput = () => setEditInputs([...editInputs, '']);
