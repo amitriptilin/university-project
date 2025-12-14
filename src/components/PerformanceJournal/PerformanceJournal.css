@@ -1,4 +1,3 @@
-/* PerformanceJournal.css */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .performanceJournal {
@@ -29,7 +28,6 @@
   border: 2px solid #AFD3E2;
 }
 
-/* Общая успеваемость */
 .overallPerformance {
   margin-bottom: 30px;
 }
@@ -108,7 +106,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Панель сортировки */
 .sortPanel {
   margin-bottom: 25px;
   padding: 20px;
@@ -150,7 +147,6 @@
   box-shadow: 0 4px 12px rgba(25, 167, 206, 0.3);
 }
 
-/* Таблица предметов */
 .subjectsTable {
   margin-bottom: 30px;
   background: white;
@@ -272,7 +268,6 @@
   background: #9dbbc7;
 }
 
-/* Детальная информация */
 .subjectDetail {
   background: white;
   border-radius: 15px;
@@ -511,7 +506,6 @@
   transform: translateX(5px);
 }
 
-/* Анимации */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -529,7 +523,6 @@
   animation: slideInUp 0.4s ease-out;
 }
 
-/* Адаптивность */
 @media (max-width: 1200px) {
   .summaryGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -606,7 +599,6 @@
   }
 }
 
-/* Общие стили текста */
 .hintText {
   color: #146C94;
   font-size: 14px;
@@ -619,7 +611,6 @@
   font-weight: 500;
 }
 
-/* Состояния кнопок */
 .sortButton:disabled,
 .viewButton:disabled {
   opacity: 0.5;
@@ -627,13 +618,11 @@
   transform: none !important;
 }
 
-/* Эффекты ховера */
 .gradeBadge:hover {
   transform: scale(1.05);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Скролл для таблицы на мобильных */
 @media (max-width: 992px) {
   .subjectsTable {
     position: relative;

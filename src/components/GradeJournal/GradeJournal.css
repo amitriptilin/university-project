@@ -1,27 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* Основные стили контейнера */
 .gradeJournal {
-  padding: 20px 20px 20px 30px; /* Левый отступ 30px как в твоём хедере */
-  max-width: 1000px; /* Увеличил максимальную ширину */
+  padding: 20px 20px 20px 30px;
+  max-width: 1000px;
   margin: 0 auto;
   background-color: #F6F1F1;
   font-family: "Open Sans", sans-serif;
   animation: subtleFadeIn 0.4s ease-out;
 }
 
-/* Центрирование только заголовка */
 .gradeJournal-header {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Контент выравниваем слева */
 .gradeJournal-content {
   text-align: left;
 }
 
-/* Сдержанные анимации */
 @keyframes subtleFadeIn {
   from {
     opacity: 0;
@@ -55,7 +51,6 @@
   }
 }
 
-/* Кнопки */
 .addButton {
   padding: 12px 24px;
   background: #19A7CE;
@@ -69,7 +64,7 @@
   font-size: 16px;
   transition: all 150ms ease-in;
   animation: subtleSlideIn 0.3s ease-out;
-  margin-left: 0; /* Выравниваем по левому краю */
+  margin-left: 0;
 }
 
 .addButton:hover {
@@ -149,7 +144,6 @@
   background: #9dbbc7;
 }
 
-/* Области ввода */
 .addingContainer {
   border: 2px solid #19A7CE;
   padding: 25px;
@@ -158,7 +152,7 @@
   background: linear-gradient(135deg, #AFD3E2 0%, #F6F1F1 100%);
   animation: subtleScaleIn 0.25s ease;
   transition: all 150ms ease-in;
-  margin-left: 0; /* Выравниваем по левому краю */
+  margin-left: 0;
 }
 
 .addingContainer:hover {
@@ -174,14 +168,13 @@
   background: linear-gradient(135deg, #AFD3E2 0%, #F6F1F1 100%);
   animation: subtleScaleIn 0.3s ease;
   transition: all 150ms ease-in;
-  margin-left: 0; /* Выравниваем по левому краю */
+  margin-left: 0;
 }
 
 .editingContainer:hover {
   box-shadow: 0 6px 20px rgba(20, 108, 148, 0.15);
 }
 
-/* Поля ввода */
 .inputContainer {
   margin-bottom: 15px;
   display: flex;
@@ -251,7 +244,6 @@
   transform: scale(1.05);
 }
 
-/* Карточки предметов */
 .itemCard {
   border: 2px solid #AFD3E2;
   padding: 20px;
@@ -261,7 +253,7 @@
   position: relative;
   animation: subtleFadeIn 0.4s ease;
   transition: all 150ms ease-in;
-  margin-left: 0; /* Выравниваем по левому краю */
+  margin-left: 0;
 }
 
 .itemCard:hover {
@@ -309,7 +301,6 @@
   color: #19A7CE;
 }
 
-/* Кнопки управления */
 .cardControls {
   position: absolute;
   top: 20px;
@@ -358,7 +349,6 @@
   background: #c0392b;
 }
 
-/* Средний балл */
 .averageContainer {
   display: flex;
   justify-content: flex-end;
@@ -396,7 +386,6 @@
   font-weight: 500;
 }
 
-/* Оценки */
 .gradesContainer {
   margin-bottom: 5px;
   animation: subtleFadeIn 0.3s ease-out 0.25s both;
@@ -441,7 +430,6 @@
   animation-delay: 0.25s;
 }
 
-/* Статистика */
 .cardStats {
   font-size: 13px;
   color: #146C94;
@@ -473,7 +461,7 @@
   border: 2px solid #19A7CE;
   animation: subtleFadeIn 0.4s ease-out 0.35s both;
   transition: all 150ms ease-in;
-  margin-left: 0; /* Выравниваем по левому краю */
+  margin-left: 0;
 }
 
 .overallStats:hover {
@@ -481,7 +469,6 @@
   box-shadow: 0 6px 20px rgba(25, 167, 206, 0.2);
 }
 
-/* Текст и состояния */
 .placeholderText {
   color: #AFD3E2;
   font-style: italic;
@@ -509,7 +496,6 @@
   background: #AFD3E2 !important;
 }
 
-/* Группы кнопок */
 .buttonGroup {
   display: flex;
   gap: 12px;
@@ -518,13 +504,12 @@
   animation: subtleFadeIn 0.3s ease-out 0.4s both;
 }
 
-/* Заголовки */
 .gradeJournal h2 {
   color: #146C94;
   font-weight: 700;
   font-size: 28px;
   margin-bottom: 10px;
-  text-align: center; /* Только заголовок по центру */
+  text-align: center;
 }
 
 .gradeJournal h3 {
@@ -532,7 +517,7 @@
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 15px;
-  text-align: left; /* Остальные заголовки слева */
+  text-align: left;
 }
 
 .gradeJournal h4 {
@@ -542,10 +527,9 @@
   text-align: left;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .gradeJournal {
-    padding: 20px 15px 20px 15px; /* На мобильных уменьшаем отступы */
+    padding: 20px 15px 20px 15px;
   }
   
   .cardHeader {
